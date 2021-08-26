@@ -1,38 +1,272 @@
-.App {
-  text-align: center;
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+textarea:hover, input:hover, textarea:active, input:active, textarea:focus, input:focus, button:focus, button:active, button:hover, label:focus, .btn:active, .btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-result-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.result{
+  position: relative;
+  top: -15px;
+}
+.heading {
+  display: flex;
+  position: relative;
+  margin-bottom: 20px;
+  right: -20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.p1 {
+  font-weight: 400;
+  font-style: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.yan {
+  font-weight: 800 !important;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.yan::first-letter {
+  color: red;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.input-text {
+  width: 600px;
+  resize: none;
+  height: 150px;
+  font-size: 20px;
+  border: none;
+  text-align: start;
+  background-color: white;
+}
+
+.section-form:hover {
+  outline: none;
+  border: 2px solid #FFDC61;
+}
+
+.select {
+  width: 70px;
+  height: 2em;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.each-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  border: solid 2px rgb(168, 168, 168);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.section-form {
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.from {
+  position: relative;
+  left: 534px;
+}
+
+.btn-tran {
+  position: relative;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  top: -55px;
+  transition: 0.1s;
+  font-weight: 600;
+}
+
+.btn-tran:hover {
+  cursor: pointer;
+  font-size: 12px;
+  border: 2px solid #FFDC61;
+}
+
+.bts-all {
+  display: flex;
+  flex-direction: column;
+}
+
+.switch {
+  margin-top: 10px;
+}
+
+.synonyms {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.syno {
+  margin: 5px;
+  display: inline-block;
+  color: rgb(132, 132, 230)
+}
+
+.syno:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.from-syn {
+  position: relative;
+  right: 420px;
+}
+
+.word {
+  font-size: 20px;
+}
+
+.related {
+  position: relative;
+  left: 30px;
+}
+
+.dictionary {
+  position: relative;
+  right: 400px;
+}
+
+.transcript {
+  color: #929290;
+}
+
+.noneshow {
+  display: none;
+}
+
+.pos {
+  color: #007701
+}
+
+.pdescr {
+  position: relative;
+  right: 400px;
+}
+
+.earase {
+  position: relative;
+  top: -30px;
+  right: -10px;
+  font-size: 15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  background-color: white;
+  margin-bottom: -10px;
+  border: 1px solid grey;
+  color: grey;
+  padding: 0 0px;
+  font-weight: 900;
+}
+
+.earase:hover {
+  cursor: pointer;
+  color: red;
+  border: 1px solid red;
+}
+
+.earasenone {
+  position: relative;
+  top: -30px;
+  right: -10px;
+  font-size: 15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  background-color: white;
+  margin-bottom: -10px;
+  border: 2px solid grey;
+  color: grey;
+  padding: 0 0px;
+  font-weight: 900;
+}
+
+.totextarea:hover {
+  color: red !important;
+}
+
+.bookmark {
+  color: grey;
+  position: relative;
+  top: -25px;
+  right: -550px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.bookmark:hover {
+  cursor: pointer;
+}
+
+.bookmark:active {
+  color: #FFDC61;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.bookmarkfill {
+  color: #FFDC61;
+  position: relative;
+  top: -25px;
+  right: -550px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.saved-words {
+ display: flex;
+ flex-direction: row;
+  justify-content: space-around;
+  font-size: 20px;
+
+}
+
+.saved-bookmark{
+  position: relative;
+  color: grey;
+  font-size: 40px;
+  top: 20px;
+  right: 70px;
+}
+
+.saved-bookmark:hover{
+  cursor: pointer;
+  color:  #FFDC61;
+}
+
+.heading-top{
+  display: flex;
+  justify-content: space-between;
+}
+
+.jeu{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid black;
+  width: 600px
 }
